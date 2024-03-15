@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
-import React from 'react'
-import { styles } from './styles';
+import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {styles} from '../../styles';
 
 const DetailsScreen = ({navigation}: any) => {
   return (
@@ -14,8 +14,12 @@ const DetailsScreen = ({navigation}: any) => {
         ipsa beatae aliquid fugit error corrupti, provident sunt et expedita
         voluptates eligendi hic repellat!
       </Text>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.goBack()}>
+        <Text style={styles.buttonText}>Go Back</Text>
+      </TouchableOpacity>
     </View>
   );
-}
+};
 export default DetailsScreen;

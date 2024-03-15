@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
-import React from 'react'
-import { styles } from './styles';
+import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {styles} from '../../styles';
 
 const SettingsScreen = ({navigation}: any) => {
   return (
@@ -11,8 +11,12 @@ const SettingsScreen = ({navigation}: any) => {
         labore adipisci, reprehenderit modi libero id placeat, odit ipsum
         quisquam amet!
       </Text>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.goBack()}>
+        <Text style={styles.buttonText}>Go Back</Text>
+      </TouchableOpacity>
     </View>
   );
-}
+};
 export default SettingsScreen;

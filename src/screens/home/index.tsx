@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
-import React from 'react'
-import { styles } from './styles';
+import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {styles} from '../../styles';
 
 const Home = ({navigation}: any) => {
   return (
@@ -13,15 +13,19 @@ const Home = ({navigation}: any) => {
         Feel like spicing things up? Go ahead, check out the settings. Maybe
         you'll find something cool there. Or not. Whatever floats your taco.
       </Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Details')}>
+          <Text style={styles.buttonText}>Go to details!</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Settings')}>
+          <Text style={styles.buttonText}>Go to Settings</Text>
+        </TouchableOpacity>
+      </View>
     </View>
-  )
-}
+  );
+};
 export default Home;
