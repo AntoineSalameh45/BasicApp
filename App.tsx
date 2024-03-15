@@ -2,29 +2,9 @@ import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import MainNavigator from './src/navigation/mainNavigator';
 
-function HomeScreen({navigation}: any) {
-  return (
-    <View style={styles.homeContainer}>
-      <Text style={styles.welcomeMessage}>
-        Hey there, little chimichanga! Welcome to this mind-blowingly BasicApp.
-        It's so basic, it makes vanilla ice cream look like a flavor explosion.
-      </Text>
-      <Text style={styles.settingsInfo}>
-        Feel like spicing things up? Go ahead, check out the settings. Maybe
-        you'll find something cool there. Or not. Whatever floats your taco.
-      </Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
-    </View>
-  );
-}
+
 function DetailsScreen({navigation}: any) {
   return (
     <View style={styles.homeContainer}>
@@ -57,26 +37,10 @@ function SettingsScreen({navigation}: any) {
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={({navigation}) => ({
-            // eslint-disable-next-line react/no-unstable-nested-components
-            headerRight: () => (
-              <Button
-                onPress={() => navigation.navigate('Settings')}
-                title="Settings"
-              />
-            ),
-          })}
-        />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
-      </Stack.Navigator>
+      <MainNavigator />
     </NavigationContainer>
   );
 }
@@ -102,11 +66,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     color: 'black',
-  },
-  settingsIcon: {
-    fontSize: 24, // Adjust the size as needed
-    marginRight: 10, // Add some margin to separate the icon from the text
-    color: 'black', // Adjust the color of the icon
   },
 });
 
