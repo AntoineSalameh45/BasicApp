@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   },
   headerButton: {
     marginRight: 10,
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#EEEEEE',
   },

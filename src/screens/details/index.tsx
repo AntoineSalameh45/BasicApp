@@ -9,14 +9,16 @@ const DetailsScreen = ({navigation}: any) => {
       <NavMenu navigation={navigation} />
       <View style={detailStyles.textContainer}>
         <Text style={detailStyles.textContainerText}>
-          So they gave us this Assignment #4
+          So they gave us this Assignment#4 ...
         </Text>
         <View style={detailStyles.quoteContainer}>
           <Text style={detailStyles.quoteContainerText}>
-            "and I knew exactly what to do. But in a much more real sense, I had
+            "And I knew exactly what to do. But in a much more real sense, I had
             no idea what to do." -Michael Scott
           </Text>
-          <Text style={detailStyles.quoteRef}>The Office US - S5 E13</Text>
+          <Text style={detailStyles.quoteRef}>
+            The Office US - S5 E14 Part 1
+          </Text>
         </View>
       </View>
       <Image
@@ -30,6 +32,7 @@ const detailStyles = StyleSheet.create({
   image: {
     height: 450,
     marginTop: 20,
+    bottom: 0,
   },
   textContainer: {
     width: '100%',
@@ -38,6 +41,8 @@ const detailStyles = StyleSheet.create({
     color: '#76ABAE',
     fontSize: 18,
     width: '100%',
+    marginLeft: 10,
+    marginBottom: 5,
   },
   quoteContainer: {
     color: '#31363F',
@@ -57,8 +62,9 @@ const detailStyles = StyleSheet.create({
   },
   quoteRef: {
     color: '#31363F',
-    fontSize: 16,
-    padding: 11,
+    fontSize: 12,
+    fontFamily: 'Roboto',
+    textAlign: 'right',
   },
 });
 export default DetailsScreen;
