@@ -38,4 +38,44 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: '#31363F',
   },
+  deadpoolImg: {
+    width: 200,
+    height: 200,
+  },
+  headerContainer: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+  },
+  headerButton: {
+    marginRight: 10,
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#EEEEEE',
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: '#EEEEEE',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    width: '50%',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+    fontSize: 18,
+    color: '#31363F',
+  },
+  modalButtonsContainer: {
+    flexDirection: 'row',
+    gap: 30,
+    marginTop: 35,
+  },
 });
