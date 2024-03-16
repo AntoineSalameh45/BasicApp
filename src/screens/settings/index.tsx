@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import React from 'react';
 import {styles} from '../../styles';
 import NavMenu from '../../components/molecules/navMenu';
@@ -13,6 +13,7 @@ const SettingsScreen = ({navigation}: any) => {
         labore adipisci, reprehenderit modi libero id placeat, odit ipsum
         quisquam amet!
       </Text>
+      <TextInput placeholder="lil chimichanga" style={styles.textInput} />
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.goBack()}>

@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
   },
   textContainer: {
     color: '#76ABAE',
+    padding: 20,
   },
   buttonContainer: {
     width: '75%',
@@ -77,5 +78,12 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 30,
     marginTop: 35,
+  },
+  textInput: {
+    backgroundColor: '#EEEEEEC4',
+    color: '#31363F',
+    marginTop: 20,
+    padding: 20,
+    width: '75%',
   },
 });
