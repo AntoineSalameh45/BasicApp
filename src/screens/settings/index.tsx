@@ -1,25 +1,20 @@
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TextInput} from 'react-native';
 import React from 'react';
 import {styles} from '../../styles';
 import NavMenu from '../../components/molecules/navMenu';
+import BackButton from '../../components/atoms/backButton';
 
 const SettingsScreen = ({navigation}: any) => {
   return (
     <View style={styles.homeContainer}>
       <NavMenu navigation={navigation} />
       <Text style={styles.textContainer}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsam
-        doloremque consectetur. Minima rem hic nemo ipsam. Assumenda aliquam,
-        labore adipisci, reprehenderit modi libero id placeat, odit ipsum
-        quisquam amet!
+        Yo! Go ahead and drop your real name my lil chimichanga.
       </Text>
       <TextInput placeholder="lil chimichanga" style={styles.textInput} />
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.goBack()}>
-        <Text style={styles.buttonText}>Go Back</Text>
-      </TouchableOpacity>
+      <BackButton navigation={navigation} />
     </View>
   );
 };
+
 export default SettingsScreen;

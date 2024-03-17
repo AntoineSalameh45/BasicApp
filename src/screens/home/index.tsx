@@ -1,7 +1,8 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {styles} from '../../styles';
 import NavMenu from '../../components/molecules/navMenu';
+import NavigationButton from '../../components/atoms/navigationButton';
 
 const Home = ({navigation}: any) => {
   return (
@@ -20,16 +21,16 @@ const Home = ({navigation}: any) => {
         you'll find something cool there. Or not. Whatever floats your taco.
       </Text>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Details')}>
-          <Text style={styles.buttonText}>Go to details!</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Settings')}>
-          <Text style={styles.buttonText}>⚙ Settings</Text>
-        </TouchableOpacity>
+        <NavigationButton
+          navigation={navigation}
+          destination="Details"
+          buttonText="Go to details!"
+        />
+        <NavigationButton
+          navigation={navigation}
+          destination="Settings"
+          buttonText="⚙ Settings"
+        />
       </View>
     </View>
   );
