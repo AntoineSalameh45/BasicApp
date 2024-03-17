@@ -1,38 +1,51 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
 import React from 'react';
 import {styles} from '../../styles';
 import NavMenu from '../../components/organisms/navMenu';
 
 const DetailsScreen = ({navigation}: any) => {
+  const {width} = Dimensions.get('window');
+  const imageHeight = width * 0.8;
+
   return (
     <View style={styles.homeContainer}>
       <NavMenu navigation={navigation} />
-      <View style={detailStyles.textContainer}>
-        <Text style={detailStyles.textContainerText}>
-          So they gave us this Assignment#4 ...
-        </Text>
-        <View style={detailStyles.quoteContainer}>
-          <Text style={detailStyles.quoteContainerText}>
-            "And I knew exactly what to do. But in a much more real sense, I had
-            no idea what to do." -Michael Scott
+      <ScrollView style={styles.scrollContainer}>
+        <View style={detailStyles.textContainer}>
+          <Text style={detailStyles.textContainerText}>
+            So they gave us this Assignment#4 ...
           </Text>
-          <Text style={detailStyles.quoteRef}>
-            The Office US - S5 E14 Part 1
-          </Text>
+          <View style={detailStyles.quoteContainer}>
+            <Text style={detailStyles.quoteContainerText}>
+              "And I knew exactly what to do. But in a much more real sense, I
+              had no idea what to do." {'\n'} -Michael Scott
+            </Text>
+            <Text style={detailStyles.quoteRef}>
+              The Office US - S5 E14 Part 1
+            </Text>
+          </View>
         </View>
-      </View>
-      <Image
-        source={require('../../assets/MichaelGScott.jpg')}
-        style={detailStyles.image}
-      />
+        <Image
+          source={require('../../assets/MichaelGScott.jpg')}
+          style={[detailStyles.image, {height: imageHeight}]}
+        />
+      </ScrollView>
     </View>
   );
 };
 const detailStyles = StyleSheet.create({
   image: {
-    height: 450,
+    width: '80%',
     marginTop: 20,
     bottom: 0,
+    alignSelf: 'center',
   },
   textContainer: {
     width: '100%',
@@ -49,8 +62,8 @@ const detailStyles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: '#EEEEEEc4',
     padding: 11,
-    marginHorizontal: 50,
-    width: '75%',
+    alignSelf: 'center',
+    width: '90%',
     borderRadius: 11,
     alignContent: 'center',
     justifyContent: 'center',

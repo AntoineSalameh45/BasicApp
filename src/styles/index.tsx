@@ -1,4 +1,10 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, PixelRatio, Dimensions} from 'react-native';
+
+const scale = (size: number) => {
+  const ratio = PixelRatio.get();
+  return size * ratio;
+};
+const {width, height} = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
   homeContainer: {
@@ -6,6 +12,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#222831',
+  },
+  scrollContainer: {
+    marginTop: 40,
   },
   welcomeMessage: {
     fontSize: 20,
@@ -25,9 +34,9 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
   buttonContainer: {
-    width: '75%',
+    width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   button: {
     marginTop: 40,
@@ -50,8 +59,9 @@ export const styles = StyleSheet.create({
     color: '#EEEEEE',
   },
   deadpoolImg: {
-    width: 200,
-    height: 200,
+    width: scale(100),
+    height: scale(100),
+    alignSelf: 'center',
   },
   headerContainer: {
     position: 'absolute',
@@ -86,7 +96,7 @@ export const styles = StyleSheet.create({
   },
   modalButtonsContainer: {
     flexDirection: 'row',
-    gap: 30,
+    gap: height > width ? 30 : 100,
     marginTop: 35,
   },
   textInput: {
