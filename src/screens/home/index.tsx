@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {styles} from '../../styles';
-import NavMenu from '../../components/molecules/navMenu';
+import NavMenu from '../../components/organisms/navMenu';
 import NavigationButton from '../../components/atoms/navigationButton';
 import {useNameContext} from '../../components/molecules/nameContext';
 

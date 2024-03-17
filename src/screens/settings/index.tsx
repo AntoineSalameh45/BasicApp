@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import {styles} from '../../styles';
-import NavMenu from '../../components/molecules/navMenu';
+import NavMenu from '../../components/organisms/navMenu';
 import {useNameContext} from '../../components/molecules/nameContext';
 import BackButton from '../../components/atoms/backButton';
 

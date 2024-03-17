@@ -1,7 +1,7 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {styles} from '../../styles';
-import NavMenu from '../../components/molecules/navMenu';
+import NavMenu from '../../components/organisms/navMenu';
 
 const DetailsScreen = ({navigation}: any) => {
   return (
