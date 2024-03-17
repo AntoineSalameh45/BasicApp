@@ -35,9 +35,19 @@ export const styles = StyleSheet.create({
     backgroundColor: '#EEEEEE',
     borderRadius: 11,
   },
+  saveButton: {
+    marginTop: 40,
+    padding: 15,
+    backgroundColor: '#76ABAE',
+    borderRadius: 11,
+  },
   buttonText: {
     fontSize: 16,
     color: '#31363F',
+  },
+  saveButtonText: {
+    fontSize: 16,
+    color: '#EEEEEE',
   },
   deadpoolImg: {
     width: 200,
