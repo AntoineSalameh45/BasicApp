@@ -1,4 +1,3 @@
-```
 # BasicApp
 
 Welcome to BasicApp, a mind-blowingly basic React Native application that's sure to entertain even the most discerning chimichanga enthusiast! 🌯
