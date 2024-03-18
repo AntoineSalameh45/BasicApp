@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput, Alert} from 'react-native';
 import {styles} from '../../styles';
 import NavMenu from '../../components/organisms/navMenu';
 import {useNameContext} from '../../components/molecules/nameContext';
@@ -11,7 +11,22 @@ const SettingsScreen = ({navigation}: any) => {
 
   const handleSave = () => {
     setName(newName);
-    navigation.navigate('Home');
+    Alert.alert(
+      'Name Saved!',
+      'Your name has been noted, chimichanga!',
+      [
+        {
+          text: 'Go Back to Home',
+          onPress: () => navigation.navigate('Home'),
+        },
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel pressed'),
+          style: 'cancel',
+        },
+      ],
+      {cancelable: false},
+    );
   };
 
   return (
