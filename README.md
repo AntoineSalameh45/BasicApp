@@ -86,4 +86,3 @@ To learn more about React Native, check out the following resources:
 - [React Native Documentation](https://reactnative.dev/docs/getting-started)
 - [React Native Blog](https://reactnative.dev/blog)
 - [GitHub Repository](https://github.com/facebook/react-native)
-```
